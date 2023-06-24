@@ -39,7 +39,7 @@
 
 ### Icon
 
-- [icooon-mono.com](https://icooon-mono.com/11304-%e3%82%a2%e3%83%b3%e3%82%b1%e3%83%bc%e3%83%88%e7%94%a8%e7%b4%99%e3%81%ae%e3%82%a2%e3%82%a4%e3%82%b3%e3%83%b3%e7%b4%a0%e6%9d%90/)
+- [icooon-mono.com](https://icooon-mono.com/12841-%e3%83%9f%e3%82%ad%e3%82%b5%e3%83%bc%ef%bc%88%e9%9f%b3%e6%a5%bd%ef%bc%89%e3%81%ae%e3%82%a2%e3%82%a4%e3%82%b3%e3%83%b36/)
 
 ---
 
