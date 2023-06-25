@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/YU000jp/logseq-plugin-bullet-point-style/compare/v1.0.1...v1.1.0) (2023-06-25)
+
+
+### Features
+
+* **Add:** toolbar button ([698e528](https://github.com/YU000jp/logseq-plugin-bullet-point-style/commit/698e5280235fef1b16eb58d4f69e425a5e9eea76))
+
 ## [1.0.1](https://github.com/YU000jp/logseq-plugin-bullet-point-style/compare/v1.0.0...v1.0.1) (2023-06-25)
 
 
