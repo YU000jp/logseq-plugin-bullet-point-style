@@ -9,13 +9,10 @@ const main = () => {
   logseq.useSettingsSchema(settingsTemplate);
   if (!logseq.settings) setTimeout(() => logseq.showSettingsUI(), 300);
 
+ provideBulletsType(logseq.settings!.bulletsType || "default");
   if (logseq.settings!.booleanBulletHighlight === true) provideHighlightBullets(logseq.settings!.BulletHighlightColor);
-
   if (logseq.settings!.booleanClosedBullet === true) provideClosedBullets(logseq.settings!.closedBulletColor);
-
   if (logseq.settings!.booleanSelectedBlockHighlight === true) selectedBlockHighlight();
-
-  provideBulletsType(logseq.settings!.bulletsType || "default");
 
 
   logseq.onSettingsChanged((newSet: LSPluginBaseInfo['settings'], oldSet: LSPluginBaseInfo['settings']) => {
@@ -78,12 +75,11 @@ const provideHighlightBullets = (color: string) => logseq.provideStyle({
   style: `
   /*= highlight current path by cannnibalox v20210220 =*/
   /* https://github.com/cannibalox/logseq-dark-hpx#logseq-highlight-current-pathcss */
-  div:is(#main-content-container,#right-sidebar) div.ls-block:hover span.bullet {
+  div:is(#main-content-container,#right-sidebar) div.ls-block:hover span:not(.bullet-closed) span.bullet {
       background-color: ${color || "#dd0707"};
-      opacity: .8;
       outline: 2px solid ${color || "#dd0707"};
   }
-  div:is(#main-content-container,#right-sidebar) div.ls-block:not(:hover):not(:focus-within) span.bullet {
+  div:is(#main-content-container,#right-sidebar) div.ls-block:not(:hover):not(:focus-within) span:not(.bullet-closed) span.bullet {
       background-color: var(--ls-block-bullet-color);
       outline: unset;
   }
@@ -93,10 +89,12 @@ const provideHighlightBullets = (color: string) => logseq.provideStyle({
 const provideClosedBullets = (color: string) => logseq.provideStyle({
   key: keyClosedBullets,
   style: `
-  div#app-container span.bullet-container.bullet-closed{
+  div#app-container span.bullet-container.bullet-closed span.bullet {
     background-color: ${color || "#0079fa"};
-    opacity: .8;
-}
+  }
+  div#app-container span.bullet-container:not(.typed-list).bullet-closed {
+    background-color: unset;
+  }
   ` });
 
 const selectedBlockHighlight = () => logseq.provideStyle({
@@ -114,7 +112,7 @@ const provideBulletsType = (type: string) => {
   let style = "";
   if (type === "default") {
     style = `
-      div#app-container span.bullet-container.bullet-closed{
+      div#app-container span.bullet-container.bullet-closed span.bullet{
         width:10px;
         height:10px;
     }
@@ -127,7 +125,7 @@ const provideBulletsType = (type: string) => {
         height: 2px;
         margin: 3px;
       }     
-      div#app-container span.bullet-container.bullet-closed{
+      div#app-container span.bullet-container.bullet-closed span.bullet{
         height: inherit;
         border-radius: unset;
     }
@@ -140,7 +138,7 @@ const provideBulletsType = (type: string) => {
         height: inherit;
         margin: 2px;
       }
-      div#app-container span.bullet-container.bullet-closed{
+      div#app-container span.bullet-container.bullet-closed span.bullet{
         width: inherit;
         border-radius: unset;
       }
@@ -153,7 +151,7 @@ const provideBulletsType = (type: string) => {
         width: 55%;
         height: 55%;
       }
-      div#app-container span.bullet-container.bullet-closed{
+      div#app-container span.bullet-container.bullet-closed span.bullet{
         border-radius: unset;
       }
       `;
@@ -166,7 +164,7 @@ const provideBulletsType = (type: string) => {
           height: 55%;
           transform: rotate(45deg);
         }
-        div#app-container span.bullet-container.bullet-closed{
+        div#app-container span.bullet-container.bullet-closed span.bullet{
           border-radius: unset;
           transform: rotate(45deg);
           width:12px;
@@ -180,7 +178,7 @@ const provideBulletsType = (type: string) => {
         width: 55%;
         height: 55%;
       }
-      div#app-container span.bullet-container.bullet-closed{
+      div#app-container span.bullet-container.bullet-closed span.bullet{
         width:12px;
         height:12px;
       }
