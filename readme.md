@@ -9,7 +9,9 @@
 
 ---
 
-## Features
+## Feature
+
+![BulletPointStyle](https://github.com/YU000jp/logseq-plugin-bullet-point-style/assets/111847207/0cf96512-62d6-473b-816c-bf21e7820f64)
 
 ---
 
