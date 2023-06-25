@@ -186,7 +186,18 @@ const provideBulletsType = (type: string) => {
             }
 
   logseq.provideStyle({ key: keyBulletsType, style });
-};
+
+  logseq.App.registerUIItem('toolbar', {
+    key: logseq.baseInfo.id,
+    template: `<div id="openPARAbutton" data-rect><a class="button icon" data-on-click="openBulletOpenSettingsUI" title="Open the plugin settings" style="font-size:20px">🔷</a></div>`,
+  });
+  logseq.provideModel({
+    openBulletOpenSettingsUI() {
+    logseq.showSettingsUI();
+    },
+  });
+
+}//main();
 
 
 const removeProvideStyle = (className: string) => {

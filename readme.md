@@ -33,7 +33,7 @@
 
 ### Usage
 
-- When this plugin install, the style be applied to journals or the single page , the right sidebar.
+- When this plugin install, the style be applied. To open the plugin settings on click the top toolbar button `🔷`.
 
 #### Plugin Settings
 
