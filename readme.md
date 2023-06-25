@@ -13,6 +13,12 @@
 
 ![BulletPointStyle](https://github.com/YU000jp/logseq-plugin-bullet-point-style/assets/111847207/0cf96512-62d6-473b-816c-bf21e7820f64)
 
+![image](https://github.com/YU000jp/logseq-plugin-bullet-point-style/assets/111847207/1587d95b-272e-480f-b600-c84821aebce8) ![image](https://github.com/YU000jp/logseq-plugin-bullet-point-style/assets/111847207/38c93c02-f5ab-440e-b60f-b95611b8b503) ![image](https://github.com/YU000jp/logseq-plugin-bullet-point-style/assets/111847207/ecee0269-551b-4894-82d1-78506db75d0c)
+
+
+
+
+
 ---
 
 ## Getting Started
