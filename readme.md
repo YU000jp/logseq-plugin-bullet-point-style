@@ -17,10 +17,6 @@
 
 ![image](https://github.com/YU000jp/logseq-plugin-bullet-point-style/assets/111847207/1587d95b-272e-480f-b600-c84821aebce8) ![image](https://github.com/YU000jp/logseq-plugin-bullet-point-style/assets/111847207/38c93c02-f5ab-440e-b60f-b95611b8b503) ![image](https://github.com/YU000jp/logseq-plugin-bullet-point-style/assets/111847207/ecee0269-551b-4894-82d1-78506db75d0c)
 
-
-
-
-
 ---
 
 ## Getting Started
@@ -32,6 +28,24 @@
 - Type `Point` in the search field, select it from the search results and install
 
 ### Usage
+
+- Bullets type: Select
+  - `default`
+  - `line`
+  - `vertical`
+  - `square`
+  - `rotate-square`
+  - `large-circle`
+- Use highlight bullets of current path: Toggle
+  - `true` default
+  - `false`
+- Highlight color of bullets
+  - (Choice Color)
+- Use coloring closed bullets: Toggle
+  - `true` default
+  - `false`
+- Color of closed bullet
+  - (Choice Color)
 
 ---
 
