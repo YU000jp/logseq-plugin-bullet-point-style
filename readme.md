@@ -1,6 +1,10 @@
 # Logseq Plugin: Bullet Point Style
 
+- Change bullet points style and color.
+
 - Development stage 👷🚧
+
+> This plugin still has room for improvement. Please let me know if you encounter any issues or have any ideas for enhancement.
 
 [![latest release version](https://img.shields.io/github/v/release/YU000jp/logseq-plugin-bullet-point-style)](https://github.com/YU000jp/logseq-plugin-bullet-point-style/releases)
 [![License](https://img.shields.io/github/license/YU000jp/logseq-plugin-bullet-point-style?color=blue)](https://github.com/YU000jp/logseq-plugin-bullet-point-style/LICENSE)
@@ -28,6 +32,10 @@
 - Type `Point` in the search field, select it from the search results and install
 
 ### Usage
+
+- When this plugin install, the style be applied to journals or the single page , the right sidebar.
+
+#### Plugin Settings
 
 - Bullets type: Select
   - `default`
