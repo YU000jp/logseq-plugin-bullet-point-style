@@ -1,4 +1,4 @@
-# Logseq Plugin: Bullet Point Style
+# Logseq Plugin: Bullet Point Style 🔷
 
 - Change bullet points style and color.
 
