@@ -7,7 +7,7 @@
 [![latest release version](https://img.shields.io/github/v/release/YU000jp/logseq-plugin-bullet-point-style)](https://github.com/YU000jp/logseq-plugin-bullet-point-style/releases)
 [![License](https://img.shields.io/github/license/YU000jp/logseq-plugin-bullet-point-style?color=blue)](https://github.com/YU000jp/logseq-plugin-bullet-point-style/LICENSE)
 [![Downloads](https://img.shields.io/github/downloads/YU000jp/logseq-plugin-bullet-point-style/total.svg)](https://github.com/YU000jp/logseq-plugin-bullet-point-style/releases)
-<!-- Published 2023 -->
+ Published 2023/06/25
 
 ---
 
@@ -23,11 +23,13 @@
 
 ## Getting Started
 
-### Install from Logseq Marketplace (Coming👷🚧)
+### Install from Logseq Marketplace
 
 - Press [`---`] on the top right toolbar to open [`Plugins`]
 - Select marketplace
 - Type `Point` in the search field, select it from the search results and install
+
+  ![image](https://github.com/YU000jp/logseq-plugin-bullet-point-style/assets/111847207/8c301202-8a77-497e-80cc-730c45054e3b)
 
 ### Usage
 
