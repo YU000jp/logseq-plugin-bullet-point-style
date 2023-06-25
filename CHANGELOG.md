@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/YU000jp/logseq-plugin-bullet-point-style/compare/v1.0.0...v1.0.1) (2023-06-25)
+
+
+### Bug Fixes
+
+* **bug:** closed bullets ([93750ff](https://github.com/YU000jp/logseq-plugin-bullet-point-style/commit/93750ff43c22eea84dd6a9b592490cde280b3af2))
+
 # 1.0.0 (2023-06-24)
 
 
