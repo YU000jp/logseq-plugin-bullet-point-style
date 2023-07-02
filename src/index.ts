@@ -194,9 +194,9 @@ const provideBulletsType = (type: string) => {
   div:is(#main-content-container,#right-sidebar) span.bullet-container span.bullet {
     transition:unset;
   }
-  div:is(#main-content-container,#right-sidebar) div.ls-block:not(:hover):not(:focus-within) span:not(.bullet-closed) span.bullet:hover {
-    width: 110%;
-    height: 110%;
+  div:is(#main-content-container,#right-sidebar) div.ls-block:is(:hover,:focus-within) span:not(.bullet-closed):hover span.bullet {
+    width: .9em;
+    height: .9em;
   }
   `);
 
