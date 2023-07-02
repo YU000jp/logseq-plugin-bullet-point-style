@@ -9,11 +9,10 @@ const main = () => {
   logseq.useSettingsSchema(settingsTemplate);
   if (!logseq.settings) setTimeout(() => logseq.showSettingsUI(), 300);
 
- provideBulletsType(logseq.settings!.bulletsType || "default");
   if (logseq.settings!.booleanBulletHighlight === true) provideHighlightBullets(logseq.settings!.BulletHighlightColor);
   if (logseq.settings!.booleanClosedBullet === true) provideClosedBullets(logseq.settings!.closedBulletColor);
   if (logseq.settings!.booleanSelectedBlockHighlight === true) selectedBlockHighlight();
-
+  provideBulletsType(logseq.settings!.bulletsType || "default");
 
   logseq.onSettingsChanged((newSet: LSPluginBaseInfo['settings'], oldSet: LSPluginBaseInfo['settings']) => {
     if (oldSet.booleanBulletHighlight !== true && newSet.booleanBulletHighlight === true) {
@@ -89,18 +88,22 @@ const provideHighlightBullets = (color: string) => logseq.provideStyle({
 const provideClosedBullets = (color: string) => logseq.provideStyle({
   key: keyClosedBullets,
   style: `
-  div#app-container span.bullet-container.bullet-closed span.bullet {
+  div:is(#main-content-container,#right-sidebar) span.bullet-container.bullet-closed span.bullet {
     background-color: ${color || "#0079fa"};
   }
-  div#app-container span.bullet-container:not(.typed-list).bullet-closed {
+  div:is(#main-content-container,#right-sidebar) span.bullet-container:not(.typed-list).bullet-closed {
     background-color: unset;
+  }
+  div:is(#main-content-container,#right-sidebar) a.bullet-link-wrap:has(span.bullet-container.bullet-closed) {
+    outline: 2px solid ${color || "#dd0707"};
+    border-radius: 2px;
   }
   ` });
 
 const selectedBlockHighlight = () => logseq.provideStyle({
   key: keySelectedBlockHighlight,
   style: `
-  div#app-container div.editor-wrapper:focus-within {
+  div:is(#main-content-container,#right-sidebar) div.editor-wrapper:focus-within {
     outline: 3px double ${logseq.settings!.selectedBlockHighlightColor || "#0079fa"};
     outline-offset: 1px;
     border-radius: 4px;
@@ -112,7 +115,7 @@ const provideBulletsType = (type: string) => {
   let style = "";
   if (type === "default") {
     style = `
-      div#app-container span.bullet-container.bullet-closed span.bullet{
+      div:is(#main-content-container,#right-sidebar) span.bullet-container.bullet-closed span.bullet {
         width:10px;
         height:10px;
     }
@@ -120,12 +123,12 @@ const provideBulletsType = (type: string) => {
   } else //水平線
     if (type === "line") {
       style = `
-      div#app-container span.bullet-container span.bullet{
+      div:is(#main-content-container,#right-sidebar) span.bullet-container span.bullet {
         width: inherit;
         height: 2px;
         margin: 3px;
       }     
-      div#app-container span.bullet-container.bullet-closed span.bullet{
+      div:is(#main-content-container,#right-sidebar) span.bullet-container.bullet-closed span.bullet {
         height: inherit;
         border-radius: unset;
     }
@@ -133,12 +136,12 @@ const provideBulletsType = (type: string) => {
     } else //縦線
       if (type === "vertical") {
         style = `
-      div#app-container span.bullet-container span.bullet{
+      div:is(#main-content-container,#right-sidebar) span.bullet-container span.bullet {
         width: 3px;
         height: inherit;
         margin: 2px;
       }
-      div#app-container span.bullet-container.bullet-closed span.bullet{
+      div:is(#main-content-container,#right-sidebar) span.bullet-container.bullet-closed span.bullet {
         width: inherit;
         border-radius: unset;
       }
@@ -146,25 +149,25 @@ const provideBulletsType = (type: string) => {
       } else //四角
         if (type === "square") {
           style = `
-      div#app-container span.bullet-container span.bullet{
+      div:is(#main-content-container,#right-sidebar) span.bullet-container span.bullet {
         border-radius: unset;
         width: 55%;
         height: 55%;
       }
-      div#app-container span.bullet-container.bullet-closed span.bullet{
+      div:is(#main-content-container,#right-sidebar) span.bullet-container.bullet-closed span.bullet {
         border-radius: unset;
       }
       `;
         } else //四角回転
           if (type === "rotate-square") {
             style = `
-        div#app-container span.bullet-container span.bullet{
+        div:is(#main-content-container,#right-sidebar) span.bullet-container span.bullet {
           border-radius: unset;
           width: 55%;
           height: 55%;
           transform: rotate(45deg);
         }
-        div#app-container span.bullet-container.bullet-closed span.bullet{
+        div:is(#main-content-container,#right-sidebar) span.bullet-container.bullet-closed span.bullet {
           border-radius: unset;
           transform: rotate(45deg);
           width:12px;
@@ -174,11 +177,11 @@ const provideBulletsType = (type: string) => {
           } else //丸
             if (type === "large-circle") {
               style = `
-      div#app-container span.bullet-container span.bullet{
+      div:is(#main-content-container,#right-sidebar) span.bullet-container span.bullet {
         width: 55%;
         height: 55%;
       }
-      div#app-container span.bullet-container.bullet-closed span.bullet{
+      div:is(#main-content-container,#right-sidebar) span.bullet-container.bullet-closed span.bullet {
         width:12px;
         height:12px;
       }
@@ -187,13 +190,23 @@ const provideBulletsType = (type: string) => {
 
   logseq.provideStyle({ key: keyBulletsType, style });
 
+  logseq.provideStyle(`
+  div:is(#main-content-container,#right-sidebar) span.bullet-container span.bullet {
+    transition:unset;
+  }
+  div:is(#main-content-container,#right-sidebar) div.ls-block:not(:hover):not(:focus-within) span:not(.bullet-closed) span.bullet:hover {
+    width: 110%;
+    height: 110%;
+  }
+  `);
+
   logseq.App.registerUIItem('toolbar', {
     key: logseq.baseInfo.id,
     template: `<div id="openPARAbutton" data-rect><a class="button icon" data-on-click="openBulletOpenSettingsUI" title="Open the plugin settings" style="font-size:20px">🔷</a></div>`,
   });
   logseq.provideModel({
     openBulletOpenSettingsUI() {
-    logseq.showSettingsUI();
+      logseq.showSettingsUI();
     },
   });
 
