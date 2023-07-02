@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/YU000jp/logseq-plugin-bullet-point-style/compare/v1.1.0...v1.1.1) (2023-07-02)
+
+
+### Bug Fixes
+
+* **bug:** sometimes cannot open block context menu ([f934558](https://github.com/YU000jp/logseq-plugin-bullet-point-style/commit/f9345580e5ae958d4e37aa13ec22f90447dc6fef))
+
 # [1.1.0](https://github.com/YU000jp/logseq-plugin-bullet-point-style/compare/v1.0.1...v1.1.0) (2023-06-25)
 
 
