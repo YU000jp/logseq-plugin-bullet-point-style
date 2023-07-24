@@ -2,8 +2,6 @@
 
 - Change bullet points style and color.
 
-> This plugin still has room for improvement. Please let me know if you encounter any issues or have any ideas for enhancement.
-
 [![latest release version](https://img.shields.io/github/v/release/YU000jp/logseq-plugin-bullet-point-style)](https://github.com/YU000jp/logseq-plugin-bullet-point-style/releases)
 [![License](https://img.shields.io/github/license/YU000jp/logseq-plugin-bullet-point-style?color=blue)](https://github.com/YU000jp/logseq-plugin-bullet-point-style/LICENSE)
 [![Downloads](https://img.shields.io/github/downloads/YU000jp/logseq-plugin-bullet-point-style/total.svg)](https://github.com/YU000jp/logseq-plugin-bullet-point-style/releases)
