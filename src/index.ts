@@ -74,11 +74,11 @@ const provideHighlightBullets = (color: string) => logseq.provideStyle({
   style: `
   /*= highlight current path by cannnibalox v20210220 =*/
   /* https://github.com/cannibalox/logseq-dark-hpx#logseq-highlight-current-pathcss */
-  div:is(#main-content-container,#right-sidebar) div.ls-block:hover span:not(.bullet-closed) span.bullet {
+  div:is(#main-content-container,#right-sidebar) div.ls-block:hover span:not(.bullet-closed,.as-order-list) span.bullet {
       background-color: ${color || "#dd0707"};
       outline: 2px solid ${color || "#dd0707"};
   }
-  div:is(#main-content-container,#right-sidebar) div.ls-block:not(:hover):not(:focus-within) span:not(.bullet-closed) span.bullet {
+  div:is(#main-content-container,#right-sidebar) div.ls-block:not(:hover):not(:focus-within) span:not(.bullet-closed,.as-order-list) span.bullet {
       background-color: var(--ls-block-bullet-color);
       outline: unset;
   }
@@ -88,15 +88,9 @@ const provideHighlightBullets = (color: string) => logseq.provideStyle({
 const provideClosedBullets = (color: string) => logseq.provideStyle({
   key: keyClosedBullets,
   style: `
-  div:is(#main-content-container,#right-sidebar) span.bullet-container.bullet-closed span.bullet {
+  div:is(#main-content-container,#right-sidebar) span.bullet-container:not(.as-order-list).bullet-closed span.bullet {
     background-color: ${color || "#0079fa"};
-  }
-  div:is(#main-content-container,#right-sidebar) span.bullet-container:not(.typed-list).bullet-closed {
-    background-color: unset;
-  }
-  div:is(#main-content-container,#right-sidebar) a.bullet-link-wrap:has(span.bullet-container.bullet-closed) {
-    outline: 2px solid ${color || "#dd0707"};
-    border-radius: 2px;
+    outline: 3px solid ${color || "#dd0707"};
   }
   ` });
 
@@ -104,105 +98,76 @@ const selectedBlockHighlight = () => logseq.provideStyle({
   key: keySelectedBlockHighlight,
   style: `
   div:is(#main-content-container,#right-sidebar) div.editor-wrapper:focus-within {
-    outline: 3px double ${logseq.settings!.selectedBlockHighlightColor || "#0079fa"};
-    outline-offset: 1px;
-    border-radius: 4px;
+    outline: 2px double ${logseq.settings!.selectedBlockHighlightColor || "#0079fa"};
+    outline-offset: 0.1em;
+    border-radius: 0.3em;
+    z-index: 1;
   }
   `
 })
 
 const provideBulletsType = (type: string) => {
   let style = "";
-  if (type === "default") {
-    style = `
-      div:is(#main-content-container,#right-sidebar) span.bullet-container.bullet-closed span.bullet {
-        width:10px;
-        height:10px;
-    }
-    `;
-  } else //水平線
-    if (type === "line") {
+  switch (type) {
+    case "default":
+      //None
+      break;
+    case "line"://水平線
       style = `
-      div:is(#main-content-container,#right-sidebar) span.bullet-container span.bullet {
+      div:is(#main-content-container,#right-sidebar) span.bullet-container:not(.as-order-list) span.bullet {
         width: inherit;
         height: 2px;
-        margin: 3px;
-      }     
-      div:is(#main-content-container,#right-sidebar) span.bullet-container.bullet-closed span.bullet {
-        height: inherit;
-        border-radius: unset;
-    }
+      }
       `;
-    } else //縦線
-      if (type === "vertical") {
-        style = `
-      div:is(#main-content-container,#right-sidebar) span.bullet-container span.bullet {
+      break;
+    case "vertical"://縦線
+      style = `
+      div:is(#main-content-container,#right-sidebar) span.bullet-container:not(.as-order-list) span.bullet {
         width: 3px;
         height: inherit;
-        margin: 2px;
-      }
-      div:is(#main-content-container,#right-sidebar) span.bullet-container.bullet-closed span.bullet {
-        width: inherit;
-        border-radius: unset;
       }
       `;
-      } else //四角
-        if (type === "square") {
-          style = `
-      div:is(#main-content-container,#right-sidebar) span.bullet-container span.bullet {
+      break;
+    case "square"://四角
+      style = `
+      div:is(#main-content-container,#right-sidebar) span.bullet-container:not(.as-order-list) span.bullet {
         border-radius: unset;
         width: 55%;
         height: 55%;
       }
-      div:is(#main-content-container,#right-sidebar) span.bullet-container.bullet-closed span.bullet {
-        border-radius: unset;
-      }
       `;
-        } else //四角回転
-          if (type === "rotate-square") {
-            style = `
-        div:is(#main-content-container,#right-sidebar) span.bullet-container span.bullet {
+      break;
+    case "rotate-square"://斜め四角
+      style = `
+        div:is(#main-content-container,#right-sidebar) span.bullet-container:not(.as-order-list) span.bullet {
           border-radius: unset;
           width: 55%;
           height: 55%;
           transform: rotate(45deg);
         }
-        div:is(#main-content-container,#right-sidebar) span.bullet-container.bullet-closed span.bullet {
-          border-radius: unset;
-          transform: rotate(45deg);
-          width:12px;
-          height:12px;
-        }
         `;
-          } else //丸
-            if (type === "large-circle") {
-              style = `
-      div:is(#main-content-container,#right-sidebar) span.bullet-container span.bullet {
+      break;
+    case "large-circle"://大きい丸
+      style = `
+      div:is(#main-content-container,#right-sidebar) span.bullet-container:not(.as-order-list) span.bullet {
         width: 55%;
         height: 55%;
       }
-      div:is(#main-content-container,#right-sidebar) span.bullet-container.bullet-closed span.bullet {
-        width:12px;
-        height:12px;
-      }
       `;
-            }
+      break;
+  }
 
   logseq.provideStyle({ key: keyBulletsType, style });
 
   logseq.provideStyle(`
-  div:is(#main-content-container,#right-sidebar) span.bullet-container span.bullet {
-    transition:unset;
-  }
   div:is(#main-content-container,#right-sidebar) div.ls-block:is(:hover,:focus-within) span:not(.bullet-closed):hover span.bullet {
-    width: .9em;
-    height: .9em;
+    outline: 1em;
   }
   `);
 
   logseq.App.registerUIItem('toolbar', {
     key: logseq.baseInfo.id,
-    template: `<div id="openPARAbutton" data-rect><a class="button icon" data-on-click="openBulletOpenSettingsUI" title="Open the plugin settings" style="font-size:20px">🔷</a></div>`,
+    template: `<div id="toolbarBulletPoint" data-rect><a class="button icon" data-on-click="openBulletOpenSettingsUI" title="Open the plugin settings" style="font-size:20px">🔷</a></div>`,
   });
   logseq.provideModel({
     openBulletOpenSettingsUI() {
