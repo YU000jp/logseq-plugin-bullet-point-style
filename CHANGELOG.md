@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/YU000jp/logseq-plugin-bullet-point-style/compare/v1.1.2...v1.1.3) (2023-07-24)
+
+
+### Bug Fixes
+
+* **bug:** Support order list ([0b37731](https://github.com/YU000jp/logseq-plugin-bullet-point-style/commit/0b377314349369ddcfd87fa0fade8ddb44698c27))
+
 ## [1.1.2](https://github.com/YU000jp/logseq-plugin-bullet-point-style/compare/v1.1.1...v1.1.2) (2023-07-02)
 
 
