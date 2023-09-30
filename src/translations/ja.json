@@ -1,3 +1,9 @@
 {
-
+    "Bullets type": "バレットの形",
+    "Use highlight bullets of current path": "現在のパスにあるバレットをハイライトする",
+    "Highlight color of bullets": "ハイライトの色",
+    "Use coloring closed bullets": "閉じたバレットを色分けする",
+    "Color of closed bullet": "閉じたバレットの色",
+    "Use highlight selected block": "選択されたブロックをハイライトする",
+    "Highlight color of selected block": "選択されたブロックのハイライトの色"
 }
