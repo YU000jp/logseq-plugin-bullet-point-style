@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/YU000jp/logseq-plugin-bullet-point-style/compare/v1.1.3...v1.2.0) (2023-09-30)
+
+
+### Features
+
+* **translation:** ja ([d2239cd](https://github.com/YU000jp/logseq-plugin-bullet-point-style/commit/d2239cd1875edf7f4f9fb5a9ff25ffaa55b9c272))
+
 ## [1.1.3](https://github.com/YU000jp/logseq-plugin-bullet-point-style/compare/v1.1.2...v1.1.3) (2023-07-24)
 
 
