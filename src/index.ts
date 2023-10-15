@@ -27,7 +27,7 @@ const main = () => {
   onSettingsChanged();
 
   logseq.provideStyle(`
-  div:is(#main-content-container,#right-sidebar) div.ls-block:is(:hover,:focus-within) span:not(.bullet-closed):hover span.bullet {
+  body>div#root>div>main div:is(#main-content-container,#right-sidebar) div.ls-block:is(:hover,:focus-within) span:not(.bullet-closed):hover span.bullet {
     outline: 1em;
   }
   `);
