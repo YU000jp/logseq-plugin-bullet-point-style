@@ -7,10 +7,6 @@
 [![Downloads](https://img.shields.io/github/downloads/YU000jp/logseq-plugin-bullet-point-style/total.svg)](https://github.com/YU000jp/logseq-plugin-bullet-point-style/releases)
  Published 2023/06/25
 
----
-
-## Feature
-
 ![BulletPointStyle](https://github.com/YU000jp/logseq-plugin-bullet-point-style/assets/111847207/0cf96512-62d6-473b-816c-bf21e7820f64)
 
 ### Type of bullet points
@@ -23,15 +19,13 @@
 
 ### Install from Logseq Marketplace
 
-- Press [`---`] on the top right toolbar to open [`Plugins`]
-- Select marketplace
-- Type `Point` in the search field, select it from the search results and install
+- Press [`---`] on the top right toolbar to open [`Plugins`]. Select marketplace. Type `Point` in the search field, select it from the search results and install.
 
   ![image](https://github.com/YU000jp/logseq-plugin-bullet-point-style/assets/111847207/8c301202-8a77-497e-80cc-730c45054e3b)
 
 ### Usage
 
-- When this plugin install, the style be applied. To open the plugin settings on click the top toolbar button `🔷`.
+- If the plugin is enabled, the styles be applied. To open the plugin settings on click the top toolbar button `🔷`.
 
 #### Plugin Settings
 
