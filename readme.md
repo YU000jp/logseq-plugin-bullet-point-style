@@ -26,6 +26,13 @@
 ### Usage
 
 - If the plugin is enabled, the styles be applied. To open the plugin settings on click the top toolbar button `🔷`.
+  > First, the button is hidden by Logseq. Click this button (![icon](https://github.com/YU000jp/logseq-plugin-bullet-point-custom-icon/assets/111847207/136f9d0f-9dcf-4942-9821-c9f692fcfc2f)) on the toolbar. And select this (![image](https://github.com/YU000jp/logseq-plugin-bullet-point-style/assets/111847207/033332d6-28d8-4e90-ad52-ae9d022f9b84)
+). After that, the #️⃣ button will appear on the toolbar.
+
+#### Recommend
+
+- [#️⃣Bullet Point Custom Icon plugin](https://github.com/YU000jp/logseq-plugin-bullet-point-custom-icon)
+  > Apply custom icons for bullets with specific tags. Choice Tabler-icon or emoji.
 
 #### Plugin Settings
 
