@@ -73,4 +73,4 @@ Recommend
 1. Icon > [icooon-mono.com](https://icooon-mono.com/12841-%e3%83%9f%e3%82%ad%e3%82%b5%e3%83%bc%ef%bc%88%e9%9f%b3%e6%a5%bd%ef%bc%89%e3%81%ae%e3%82%a2%e3%82%a4%e3%82%b3%e3%83%b36/)
 1. Author > [@YU000jp](https://github.com/YU000jp)
 
-<a href="https://www.buymeacoffee.com/yu000japan" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="🍌Buy Me A Coffee" style="height: 42px;width: 152px" ></a>
+<a href="https://www.buymeacoffee.com/yu000japan"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a pizza&emoji=🍕&slug=yu000japan&button_colour=FFDD00&font_colour=000000&font_family=Poppins&outline_colour=000000&coffee_colour=ffffff" /></a>
