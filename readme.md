@@ -2,18 +2,20 @@
 
 [English](https://github.com/YU000jp/logseq-plugin-bullet-point-style) | [日本語](https://github.com/YU000jp/logseq-plugin-bullet-point-style/blob/main/readme.ja.md)
 
-Change bullet points style and color.
-
 [![latest release version](https://img.shields.io/github/v/release/YU000jp/logseq-plugin-bullet-point-style)](https://github.com/YU000jp/logseq-plugin-bullet-point-style/releases)
 [![License](https://img.shields.io/github/license/YU000jp/logseq-plugin-bullet-point-style?color=blue)](https://github.com/YU000jp/logseq-plugin-bullet-point-style/LICENSE)
 [![Downloads](https://img.shields.io/github/downloads/YU000jp/logseq-plugin-bullet-point-style/total.svg)](https://github.com/YU000jp/logseq-plugin-bullet-point-style/releases)
  Published 2023/06/25
 
-![BulletPointStyle](https://github.com/YU000jp/logseq-plugin-bullet-point-style/assets/111847207/0cf96512-62d6-473b-816c-bf21e7820f64)
+## Overview
 
-### Type of bullet points
+### Change bullet points style and color
 
-![image](https://github.com/YU000jp/logseq-plugin-bullet-point-style/assets/111847207/1587d95b-272e-480f-b600-c84821aebce8) ![image](https://github.com/YU000jp/logseq-plugin-bullet-point-style/assets/111847207/38c93c02-f5ab-440e-b60f-b95611b8b503) ![image](https://github.com/YU000jp/logseq-plugin-bullet-point-style/assets/111847207/ecee0269-551b-4894-82d1-78506db75d0c)
+  ![image](https://github.com/YU000jp/logseq-plugin-bullet-point-style/assets/111847207/1587d95b-272e-480f-b600-c84821aebce8) ![image](https://github.com/YU000jp/logseq-plugin-bullet-point-style/assets/111847207/38c93c02-f5ab-440e-b60f-b95611b8b503) ![image](https://github.com/YU000jp/logseq-plugin-bullet-point-style/assets/111847207/ecee0269-551b-4894-82d1-78506db75d0c)
+
+### Highlight current line (*default: false*)
+
+  ![image](https://github.com/YU000jp/logseq-plugin-bullet-point-style/assets/111847207/80bfe4da-e156-47bd-961f-5f90c8015087)
 
 ---
 
@@ -29,10 +31,6 @@ Install from Logseq Marketplace
 - If the plugin is enabled, the styles be applied. To open the plugin settings on click the top toolbar button `🔷`.
   > First, the button is hidden by Logseq. Click this button (![icon](https://github.com/YU000jp/logseq-plugin-bullet-point-custom-icon/assets/111847207/136f9d0f-9dcf-4942-9821-c9f692fcfc2f)) on the toolbar. And select this (![image](https://github.com/YU000jp/logseq-plugin-bullet-point-style/assets/111847207/033332d6-28d8-4e90-ad52-ae9d022f9b84)
 ). After that, the #️⃣ button will appear on the toolbar.
-
-Recommend
-  - [#️⃣Bullet Point Custom Icon plugin](https://github.com/YU000jp/logseq-plugin-bullet-point-custom-icon)
-    > Apply custom icons for bullets with specific tags. Choice Tabler-icon or emoji.
 
 #### Plugin Settings
 
@@ -53,6 +51,11 @@ Recommend
   - `false`
 - Color of closed bullet
   - (Choice Color)
+- Use highlight selected block: Toggle
+  - `true`
+  - `false` default
+- Highlight color of selected block
+  - (Choice Color)
 
 ---
 
@@ -60,12 +63,14 @@ Recommend
 
 > Go to the [discussion](https://github.com/YU000jp/logseq-plugin-bullet-point-style/discussions) tab to ask and find this kind of things.
 
+Recommend
+  - [#️⃣Bullet Point Custom Icon plugin](https://github.com/YU000jp/logseq-plugin-bullet-point-custom-icon)
+    > Apply custom icons for bullets with specific tags. Choice Tabler-icon or emoji.
+
 ## Prior art & Credit
 
-CSS code > [annibalox: Logseq-Highlight-current-path.css](https://github.com/cannibalox/logseq-dark-hpx#logseq-scroll-sidebarcss)
-
-Icon > [icooon-mono.com](https://icooon-mono.com/12841-%e3%83%9f%e3%82%ad%e3%82%b5%e3%83%bc%ef%bc%88%e9%9f%b3%e6%a5%bd%ef%bc%89%e3%81%ae%e3%82%a2%e3%82%a4%e3%82%b3%e3%83%b36/)
-
-Author > [YU000jp (GitHub)](https://github.com/YU000jp)
+1. CSS code > [@annibalox: Logseq-Highlight-current-path.css](https://github.com/cannibalox/logseq-dark-hpx#logseq-scroll-sidebarcss)
+1. Icon > [icooon-mono.com](https://icooon-mono.com/12841-%e3%83%9f%e3%82%ad%e3%82%b5%e3%83%bc%ef%bc%88%e9%9f%b3%e6%a5%bd%ef%bc%89%e3%81%ae%e3%82%a2%e3%82%a4%e3%82%b3%e3%83%b36/)
+1. Author > [@YU000jp](https://github.com/YU000jp)
 
 <a href="https://www.buymeacoffee.com/yu000japan" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="🍌Buy Me A Coffee" style="height: 42px;width: 152px" ></a>
