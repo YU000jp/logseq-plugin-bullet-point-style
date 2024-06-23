@@ -61,7 +61,7 @@ Install from Logseq Marketplace
 
 ## Showcase / Questions / Ideas / Help
 
-> Go to the [discussion](https://github.com/YU000jp/logseq-plugin-bullet-point-style/discussions) tab to ask and find this kind of things.
+> Go to the [Discussions](https://github.com/YU000jp/logseq-plugin-bullet-point-style/discussions) tab to ask and find this kind of things.
 
 Recommend
   - [#️⃣Bullet Point Custom Icon plugin](https://github.com/YU000jp/logseq-plugin-bullet-point-custom-icon)
