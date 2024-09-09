@@ -1,5 +1,8 @@
 # Logseq プラグイン: *Bullet Point Style* 🔷
 
+> [!WARNING]
+>このプラグインはLogseq dbバージョンでは動作しません。
+
 [English](https://github.com/YU000jp/logseq-plugin-bullet-point-style) | [日本語](https://github.com/YU000jp/logseq-plugin-bullet-point-style/blob/main/readme.ja.md)
 
 [![最新のリリースバージョン](https://img.shields.io/github/v/release/YU000jp/logseq-plugin-bullet-point-style)](https://github.com/YU000jp/logseq-plugin-bullet-point-style/releases)
